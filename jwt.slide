@@ -181,10 +181,6 @@ Authorization Header for applications
 
   Header: Bearer eyJhbGciOiJIUzI1NiIsInR...
 
-HTTP-only cookies for web-apps
-Needs support from authentication server
-Prevents cross-site scripting
-
 
 * Sending tokens
 
