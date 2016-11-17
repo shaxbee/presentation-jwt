@@ -1,0 +1,156 @@
+Go Stateless with JWT
+17 Nov 2016
+
+Zbigniew Mandziejewicz
+Software Consultant
+shaxbee@gmail.com
+https://github.com/shaxbee
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+All state information is client-side
+State is transfered with each request
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+All state information is client-side
+State is transfered with each request
+
+_Why_Stateless?_
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+All state information is client-side
+State is transfered with each request
+
+_Why_Stateless?_
+Scaling made easy
+Failover scenarios simplified
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+All state information is client-side
+State is transfered with each request
+
+_Why_Stateless?_
+Scaling made easy
+Failover scenarios simplified
+
+_How_JWT_fits_here?_
+
+
+* Let's talk about REST
+
+_What_does_the_REST_stand_for?_
+REpresentational State Transfer
+Server has to be Stateless
+
+_Define_Stateless_
+All state information is client-side
+State is transfered with each request
+
+_Why_Stateless?_
+Scaling made easy
+Failover scenarios simplified
+
+_How_JWT_fits_here?_
+Defines how to securely transmit information
+Compact and self-contained
+Can be signed and/or encrypted
+
+
+* What is JWT
+
+JSON Web Token
+Defined by JOSE WG
+Flexible
+
+: No encryption, shared key, asymetric key
+: No constraints on claims except registered
+
+
+* How does JWT look like
+
+Pretty cryptic at first
+
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
+  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+
+* How does JWT look like
+
+Pretty cryptic at first
+
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
+  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+Base64 encoded, comma separated header, payload and signature.
+  
+
+* How does JWT look like
+
+Pretty cryptic at first
+
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
+  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+Header
+  
+  {"alg": "HS256", "typ": "JWT"}
+
+Payload
+  
+  {"sub": "1234567890", "name": "John Doe", "admin": true}
+
+Signature
+  
+  secret
+
+: Signature generated using HMAC-SHA256 defined in 'alg' header
