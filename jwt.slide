@@ -153,4 +153,70 @@ Signature
   
   secret
 
+: Registered vs private claims (sub)
 : Signature generated using HMAC-SHA256 defined in 'alg' header
+
+* How does JWT look like
+
+Pretty cryptic at first
+
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
+  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+Try it out:
+.link https://jwt.io/#debugger-io
+
+
+* Sending tokens
+
+*Always* use HTTPS
+
+
+* Sending tokens
+
+*Always* use HTTPS
+
+Authorization Header for applications
+
+  Header: Bearer eyJhbGciOiJIUzI1NiIsInR...
+
+HTTP-only cookies for web-apps
+Needs support from authentication server
+Prevents cross-site scripting
+
+
+* Sending tokens
+
+*Always* use HTTPS
+
+Authorization Header for applications
+
+  Header: Bearer eyJhbGciOiJIUzI1NiIsInR...
+
+HTTP-only cookies for web-apps
+Needs support from authentication server
+Prevents cross-site scripting
+
+
+* Obtaining tokens
+
+OAuth 2.0 Provider with JWT support
+Use libraries for existing code
+.link https://jwt.io/#libraries-io
+
+
+* Using tokens
+
+Parse token on server side
+Check if expired
+Extract user ID, scopes and others
+
+
+* Useful resources
+.link https://auth0.com/docs/jwt
+.link https://stormpath.com/blog
+.link https://jwt.io
+
+
+* Q & A
