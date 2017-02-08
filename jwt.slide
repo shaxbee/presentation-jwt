@@ -2,29 +2,14 @@ Go Stateless with JWT
 17 Nov 2016
 
 Zbigniew Mandziejewicz
-Software Consultant
-shaxbee@gmail.com
+Software Developer
 https://github.com/shaxbee
 
 * Let's talk about REST
 
 _What_does_the_REST_stand_for?_
-
-
-* Let's talk about REST
-
-_What_does_the_REST_stand_for?_
 REpresentational State Transfer
 Server has to be Stateless
-
-
-* Let's talk about REST
-
-_What_does_the_REST_stand_for?_
-REpresentational State Transfer
-Server has to be Stateless
-
-_Define_Stateless_
 
 
 * Let's talk about REST
@@ -36,19 +21,6 @@ Server has to be Stateless
 _Define_Stateless_
 All state information is client-side
 State is transfered with each request
-
-
-* Let's talk about REST
-
-_What_does_the_REST_stand_for?_
-REpresentational State Transfer
-Server has to be Stateless
-
-_Define_Stateless_
-All state information is client-side
-State is transfered with each request
-
-_Why_Stateless?_
 
 
 * Let's talk about REST
@@ -64,24 +36,6 @@ State is transfered with each request
 _Why_Stateless?_
 Scaling made easy
 Failover scenarios simplified
-
-
-* Let's talk about REST
-
-_What_does_the_REST_stand_for?_
-REpresentational State Transfer
-Server has to be Stateless
-
-_Define_Stateless_
-All state information is client-side
-State is transfered with each request
-
-_Why_Stateless?_
-Scaling made easy
-Failover scenarios simplified
-
-_How_JWT_fits_here?_
-
 
 * Let's talk about REST
 
@@ -131,15 +85,6 @@ Pretty cryptic at first
   TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 
 Base64 encoded, comma separated header, payload and signature.
-  
-
-* How does JWT look like
-
-Pretty cryptic at first
-
-  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
-  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 
 Header
   
@@ -156,33 +101,23 @@ Signature
 : Registered vs private claims (sub)
 : Signature generated using HMAC-SHA256 defined in 'alg' header
 
-* How does JWT look like
 
-Pretty cryptic at first
+* Authentication flows
 
-  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
-  TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-
-Try it out:
-.link https://jwt.io/#debugger-io
+.image Standard Token Authentication.png
 
 
-* Sending tokens
+* Authentication flows
 
-*Always* use HTTPS
-
-
-* Sending tokens
-
-*Always* use HTTPS
-
-Authorization Header for applications
-
-  Header: Bearer eyJhbGciOiJIUzI1NiIsInR...
+.image OAuth Authentication.png
 
 
-* Sending tokens
+* Authentication flows
+
+.image JWT Authentication.png
+
+
+* Exchanging tokens
 
 *Always* use HTTPS
 
@@ -200,13 +135,6 @@ Prevents cross-site scripting
 OAuth 2.0 Provider with JWT support
 Use libraries for existing code
 .link https://jwt.io/#libraries-io
-
-
-* Using tokens
-
-Parse token on server side
-Check if expired
-Extract user ID, scopes and others
 
 
 * Useful resources
